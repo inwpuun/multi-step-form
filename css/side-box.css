@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.side-box {
+    display: flex;
+    background: url(/images/bg-sidebar-desktop.svg) no-repeat;
+    width: 274px;
+    height: 568px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.sideStep {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0 0 0;
+}
+
+.sideStep .stepCircle {
+    background: transparent;
+    border: 1px solid #BFE2FD;
+    font-weight: 500;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 20px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideStep .txt p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #ADBEFF;
+    margin: 0 0 2px 0;
+}
+
+.sideStep .txt h1 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 0 0;
+}
