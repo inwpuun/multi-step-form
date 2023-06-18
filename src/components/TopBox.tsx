@@ -1,4 +1,3 @@
-// import React from 'react'
 import './../../css/side-box.css'
 
 type Props = {step: number}

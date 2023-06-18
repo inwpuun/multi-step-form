@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import SideBox from '../components/SideBox'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import './../../css/style.css'

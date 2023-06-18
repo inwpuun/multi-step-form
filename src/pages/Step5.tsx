@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import SideBox from '../components/SideBox'
 import thank from '/images/icon-thank-you.svg'
 import './../../css/style.css'

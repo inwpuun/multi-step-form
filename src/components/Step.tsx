@@ -1,5 +1,3 @@
-import React from 'react'
-
 type Props = {step: number, desc: string, nowStep: number}
 
 export default function Step({step, desc, nowStep}: Props) {

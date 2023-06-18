@@ -1,10 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import SideBox from '../components/SideBox'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './../../css/style.css'
 import './../../css/step2.css'
 import PlanBox from '../components/PlanBox'
-import { set } from 'firebase/database'
 import TopBox from '../components/TopBox'
 
 type Props = {}

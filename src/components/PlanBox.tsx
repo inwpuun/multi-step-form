@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent } from 'react'
 
 import './../../css/plan-box.css'
 import advanced from '/images/icon-advanced.svg'

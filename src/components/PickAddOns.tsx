@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react'
+import { ChangeEvent } from 'react'
 import './../../css/add-ons.css'
 
 type Props = {title: string, desc: string, price: string, type: string, addAddOns: (addOn: string) => void, delAddOns: (addOn: string) => void}
