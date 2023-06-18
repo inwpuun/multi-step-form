@@ -91,6 +91,28 @@ body {
     cursor: pointer;
 }
 
+.center .checkbox #confirm {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    background: #473DFF;
+    width: fit-content;
+    height: fit-content;
+    color: #F0F6FF;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 0 0;
+    padding: 12px 17px 12px 17px;
+    cursor: pointer;
+}
+
+.center .checkbox #confirm:hover {
+    background: #8e89f0;
+}
+
 .center .checkbox .butt:hover {
     background: #09458f;
 }

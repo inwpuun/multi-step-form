@@ -7,9 +7,36 @@ import './../../css/step1.css'
 type Props = {}
 
 export default function Step1({}: Props) {
-  const [name, setName] = useState('')
-  const [mail, setMail] = useState('')
-  const [phone, setPhone] = useState('')
+  const [name, setName] = useState(() => {
+    const savedName = localStorage.getItem("NAME")
+    if (savedName) {
+      return JSON.parse(savedName)
+    } else {
+      return ''
+    }
+  })
+  const [mail, setMail] = useState(() => {
+    const savedMail = localStorage.getItem("MAIL")
+    if (savedMail) {
+      return JSON.parse(savedMail)
+    } else {
+      return ''
+    }
+  })
+  const [phone, setPhone] = useState(() => {
+    const savedPhone = localStorage.getItem("PHONE")
+    if (savedPhone) {
+      return JSON.parse(savedPhone)
+    } else {
+      return ''
+    }
+  })
+
+  useEffect(() => {
+    localStorage.setItem("NAME", JSON.stringify(name))
+    localStorage.setItem("MAIL", JSON.stringify(mail))
+    localStorage.setItem("PHONE", JSON.stringify(phone))
+  }, [name, mail, phone])
 
   const [errorName, setErrorName] = useState('')
   const [errorMail, setErrorMail] = useState('')
@@ -47,7 +74,7 @@ export default function Step1({}: Props) {
 
   function handleNextStep() {
     if (checkName(name) && checkMail(mail) && checkPhone(phone)) {
-      navigate('/step2m')
+      navigate('/step2')
     } else {
       setErrorName(checkName(name) ? '': 'This field is required')
       setErrorMail(checkMail(mail) ? '': 'This field is required')

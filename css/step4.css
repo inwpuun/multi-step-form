@@ -1,0 +1,135 @@
+.mainStep4 {
+    display: flex;
+    /* position: relative; */
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    height: 95%;
+    align-self: flex-start;
+    justify-content: flex-start;
+    margin: 5px 50px 20px 80px;
+}
+
+.mainStep4 .planChoice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    background: #F0F6FF;
+    border-radius: 5px;
+    margin: 0 0 0 0;
+}
+
+.mainStep4 .planChoice .headTitle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+}
+
+.mainStep4 .planChoice .headTitle .leftHead {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 20px 0 0 20px;
+}
+
+.mainStep4 .planChoice .headTitle .leftHead h1 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #02295A;
+    margin: 0 0 0 0;
+}
+
+.mainStep4 .planChoice .headTitle .leftHead p {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+    color: #9699AB;
+    cursor: pointer;
+}
+
+.mainStep4 .planChoice .headTitle .leftHead p:hover {
+    color: #473DFF;
+    text-decoration: 2px underline;
+}
+
+.mainStep4 .planChoice .headTitle .rightHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mainStep4 .planChoice .headTitle .rightHead h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #02295A;
+    margin: 0 20px 0 0;
+}
+
+.mainStep4 .planChoice #line {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    height: 1px;
+    background: #D6D9E6;
+    margin: 0;
+}
+
+.mainStep4 .planChoice .addOns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: transparent;
+    margin: 0 0 0 0;
+    padding: 0 0 20px 0;
+}
+
+.mainStep4 .planChoice .addOn {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+}
+
+.mainStep4 .planChoice .addOn p {
+    font-size: 14px;
+    color: #9699AB;
+    margin: 0 0 0 0;
+}
+
+.mainStep4 .planChoice .addOn #price{
+    font-size: 14px;
+    color: #02295A;
+    margin: 0 0 0 0;
+}
+
+.mainStep4 .total {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: 30px 0 0 0;
+    justify-content: space-between;
+}
+
+.mainStep4 .total p {
+    font-size: 14px;
+    color: #9699AB;
+    margin: 0 0 0 20px;
+}
+
+.mainStep4 .total h6 {
+    font-size: 20px;
+    color: #473DFF;
+    margin: 0 0 0 0;
+    justify-self: flex-end;
+}
