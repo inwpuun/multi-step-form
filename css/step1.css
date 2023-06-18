@@ -1,70 +1,158 @@
-.container {
-    display: block;
-    position: relative;
+@media (min-width: 1270px) {
+
+    .container {
+        display: block;
+        position: relative;
+    }
+
+    .mainStep1 {
+        display: flex;
+        /* position: relative; */
+        flex-direction: column;
+        width: 50%;
+        height: 95%;
+        align-self: flex-start;
+        justify-content: flex-start;
+        margin: 5px 50px 20px 80px;
+    }
+
+    .mainStep1 form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex-grow: 1;
+        
+    }
+
+    .mainStep1 form p {
+        color: #02295A;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 15px 0 5px 0;
+    }
+
+    .mainStep1 form .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 0 0;
+    }
+
+    .mainStep1 form .name {
+        position: relative;
+    }
+
+    .mainStep1 form .top #error {
+        color: #ED3548;
+        font-weight: 500;
+    }
+
+    .mainStep1 form input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #D6D9E6;
+        outline: none;
+        border-radius: 5px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 15px;
+        box-sizing: border-box;
+        color: #02295A;
+        font-weight: 700;
+    }
+
+    .mainStep1 form input:focus {
+        border: 1px solid #473DFF;
+    }
+
+    .mainStep1 form input::placeholder {
+        color: #9699AB;
+        font-weight: 500;
+    }
 }
 
-.mainStep1 {
-    display: flex;
-    /* position: relative; */
-    flex-direction: column;
-    width: 50%;
-    height: 95%;
-    align-self: flex-start;
-    justify-content: flex-start;
-    margin: 5px 50px 20px 80px;
-}
+/* ------------------------------------------------------------------------------------- */
 
-.mainStep1 form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
+@media (max-width: 1270px) {
     
-}
-
-.mainStep1 form p {
-    color: #02295A;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 15px 0 5px 0;
-}
-
-.mainStep1 form .top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 0 0;
-}
-
-.mainStep1 form .name {
-    position: relative;
-}
-
-.mainStep1 form .top #error {
-    color: #ED3548;
-    font-weight: 500;
-}
-
-.mainStep1 form input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid #D6D9E6;
-    outline: none;
-    border-radius: 5px;
-    margin: 0 0 0 0;
-    padding: 0 0 0 15px;
-    box-sizing: border-box;
-    color: #02295A;
-    font-weight: 700;
-}
-
-.mainStep1 form input:focus {
-    border: 1px solid #473DFF;
-}
-
-.mainStep1 form input::placeholder {
-    color: #9699AB;
-    font-weight: 500;
+    .step1 {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: hsl(217, 100%, 97%);
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .mainStep1 {
+        display: flex;
+        /* position: relative; */
+        flex-direction: column;
+        width: 85%;
+        height: 75%;
+        align-self: flex-start;
+        justify-content: flex-start;
+        margin: 5px 10px 20px 30px;
+    }
+    
+    .mainStep1 form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex-grow: 1;
+        
+    }
+    
+    .mainStep1 form p {
+        color: #02295A;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 15px 0 5px 0;
+    }
+    
+    .mainStep1 form .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 0 0;
+    }
+    
+    .mainStep1 form .name {
+        position: relative;
+    }
+    
+    .mainStep1 form .top #error {
+        color: #ED3548;
+        font-weight: 500;
+    }
+    
+    .mainStep1 form input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #D6D9E6;
+        outline: none;
+        border-radius: 5px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 15px;
+        box-sizing: border-box;
+        color: #02295A;
+        font-weight: 700;
+    }
+    
+    .mainStep1 form input:focus {
+        border: 1px solid #473DFF;
+    }
+    
+    .mainStep1 form input::placeholder {
+        color: #9699AB;
+        font-weight: 500;
+    }
+    
+        
 }

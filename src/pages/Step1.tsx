@@ -3,6 +3,7 @@ import SideBox from '../components/SideBox'
 import { useNavigate } from 'react-router-dom';
 import './../../css/style.css'
 import './../../css/step1.css'
+import TopBox from '../components/TopBox';
 
 type Props = {}
 
@@ -32,11 +33,28 @@ export default function Step1({}: Props) {
     }
   })
 
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    
+    function getCurrentDimension(){
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight
+          }
+      }
+
   useEffect(() => {
     localStorage.setItem("NAME", JSON.stringify(name))
     localStorage.setItem("MAIL", JSON.stringify(mail))
     localStorage.setItem("PHONE", JSON.stringify(phone))
-  }, [name, mail, phone])
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension())
+    }
+    window.addEventListener('resize', updateDimension);
+    
+    return(() => {
+        window.removeEventListener('resize', updateDimension);
+    })
+  }, [name, mail, phone, screenSize])
 
   const [errorName, setErrorName] = useState('')
   const [errorMail, setErrorMail] = useState('')
@@ -86,8 +104,10 @@ export default function Step1({}: Props) {
   }
 
   return (
+    <div className='step1'>
+    {screenSize.width < 1270 ?  <TopBox step={1} /> : <></>}
     <div className='center'>
-      <SideBox step={1} />
+      {screenSize.width > 1270 ?  <SideBox step={1} /> : <></>}
       <div className="mainStep1">
         <div className="toptxt">
           <h1>Personal info</h1>
@@ -116,10 +136,15 @@ export default function Step1({}: Props) {
             <input type="text" style={phoneStyle} placeholder="e.g. +1 234 567 890" value={phone} onChange={(e: ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)} />
           </div>
         </form>
-        <div className="checkbox">
+        {screenSize.width >= 1270 ? <div className="checkbox">
           <div className='butt' onClick={() => handleNextStep()}>Next Step</div>
-        </div>
+        </div> : <></>}
       </div>
+    </div>
+    
+    {screenSize.width < 1270 ? <div className='bgcb2'><div className="checkbox2">
+      <div className='butt' onClick={() => handleNextStep()}>Next Step</div>
+    </div></div> : <></>}
     </div>
   )
 }

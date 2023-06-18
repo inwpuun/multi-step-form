@@ -4,15 +4,31 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import './../../css/style.css'
 import './../../css/step3.css'
 import PickAddOns from '../components/PickAddOns'
+import TopBox from '../components/TopBox'
 
 type Props = {}
 
 export default function Step3m({}: Props) {
   const [addOns, setAddOns] = useState([''])
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    
+  function getCurrentDimension(){
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight
+    }
+  }
 
   useEffect(() => {
-    console.log({ addOns })
-  }, [addOns])
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension())
+    }
+    window.addEventListener('resize', updateDimension);
+    
+    return(() => {
+        window.removeEventListener('resize', updateDimension);
+    })
+  }, [screenSize])
 
 
   const navigate = useNavigate();
@@ -37,9 +53,10 @@ export default function Step3m({}: Props) {
   }
 
   return (
-    <>
+    <div className='step3'>
+      {screenSize.width < 1270 ? <TopBox step={3} /> : <></> }
       <div className='center'>
-        <SideBox step={3} />
+        {screenSize.width > 1270 ? <SideBox step={3} /> : <></> }
         <div className="mainStep3">
           <div className="toptxt">
             <h1>Pick add-ons</h1>
@@ -50,12 +67,16 @@ export default function Step3m({}: Props) {
             <PickAddOns title="Larger storage" desc="Extra 1TB of cloud save" price={type == 'mo' ? '2' : '20'} type={type} addAddOns={addAddOns} delAddOns={delAddOns} />
             <PickAddOns title="Customizable profile" desc="Custom theme on your profile" price={type == 'mo' ? '2' : '20'} type={type} addAddOns={addAddOns} delAddOns={delAddOns} />
           </div>
-          <div className="checkbox">
+          {screenSize.width > 1270 ? <div className="checkbox">
             <Link to='/step2' className='butt0' >Go Back</Link>
             <div className='butt' onClick={() => toStep4(type, title, addOns)}>Next Step</div>
-          </div>
+          </div> : <></>}
         </div>
       </div>
-    </>
+      {screenSize.width < 1270 ? <div className='bgcb2'><div className="checkbox2">
+        <Link to='/step2' className='butt0' >Go Back</Link>
+        <div className='butt' onClick={() => toStep4(type, title, addOns)}>Next Step</div>
+      </div></div> : <></>}
+    </div>
   )
 }

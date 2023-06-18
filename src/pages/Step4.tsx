@@ -1,12 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SideBox from '../components/SideBox';
 import './../../css/style.css'
 import './../../css/step4.css'
+import TopBox from '../components/TopBox';
 
 type Props = {}
 
 export default function Step4({}: Props) {
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    
+  function getCurrentDimension(){
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight
+    }
+  }
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension())
+    }
+    window.addEventListener('resize', updateDimension);
+    
+    return(() => {
+        window.removeEventListener('resize', updateDimension);
+    })
+  }, [screenSize])
+
   const navigate = useNavigate();
   const location = useLocation();
   let type = location.state.type;
@@ -93,9 +114,10 @@ export default function Step4({}: Props) {
 
 
   return (
-    <>
+    <div className='step4'>
+      {screenSize.width < 1270 ? <TopBox step={4} /> : <></> }
       <div className='center'>
-        <SideBox step={4} />
+        {screenSize.width > 1270 ? <SideBox step={4} /> : <></> }
         <div className="mainStep4">
           <div className="toptxt">
             <h1>Finishing up</h1>
@@ -118,15 +140,18 @@ export default function Step4({}: Props) {
           </div>
           <div className="total">
             <p>Total (per {type == 'yr' ? 'year' : 'month'})</p>
-            <h6>${sumPrice()}/{type}</h6>
+            <h6>+${sumPrice()}/{type}</h6>
           </div>
-          <div className="checkbox">
+          {screenSize.width > 1270 ? <div className="checkbox">
             <div className='butt0' onClick={() => toStep3(type, title)} >Go Back</div>
             <div className='butt' id='confirm' onClick={() => navigate('/step5')}>Confirm</div>
-          </div>
+          </div> : <></>}
         </div>        
       </div>
-
-    </>
+      {screenSize.width < 1270 ? <div className='bgcb2'><div className="checkbox2">
+            <div className='butt0' onClick={() => toStep3(type, title)} >Go Back</div>
+            <div className='butt' id='confirm' onClick={() => navigate('/step5')}>Confirm</div>
+          </div></div> : <></>}
+    </div>
   )
 }

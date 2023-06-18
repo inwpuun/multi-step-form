@@ -4,6 +4,8 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+@media (min-width: 1270px) {
+    
 body {
     display: flex;
     width: 100vw;
@@ -21,6 +23,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 10px;
 }
 
 .toptxt {
@@ -117,3 +120,203 @@ body {
     background: #09458f;
 }
 
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+@media (max-width: 1269px) {
+    
+    .center {
+        background: white;
+        width: 345px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 10px;
+        margin: -75px 0 0 0;
+    }
+    
+    .toptxt {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 80%;
+        margin: 0 0 20px 0;
+    }
+    
+    .toptxt h1 {
+        font-size: 26px;
+        color: #02295A;
+        margin: 25px 0 10px 0;
+        align-self: flex-start;
+    }
+    
+    .toptxt p {
+        font-size: 14px;
+        margin: 0 0 0 0;
+        color: #9699AB;
+    }
+    
+    .center .checkbox {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    
+    .center .checkbox .butt0 {
+        display: flex;
+        flex-grow: 1;
+        align-self: flex-end;
+        justify-content: flex-start;
+        width: fit-content;
+        height: fit-content;
+        color: #9699AB;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin: 0 0 0 0;
+        padding: 12px 17px 12px 17px;
+        cursor: pointer;
+    }
+    
+    .center .checkbox .butt0:hover {
+        color: #02295A;
+    }
+    
+    .center .checkbox .butt {
+        display: flex;
+        align-self: flex-end;
+        justify-content: flex-end;
+        background: #02295A;
+        width: fit-content;
+        height: fit-content;
+        color: #F0F6FF;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin: 0 0 0 0;
+        padding: 12px 17px 12px 17px;
+        cursor: pointer;
+    }
+    
+    .center .checkbox #confirm {
+        display: flex;
+        align-self: flex-end;
+        justify-content: flex-end;
+        background: #473DFF;
+        width: fit-content;
+        height: fit-content;
+        color: #F0F6FF;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin: 0 0 0 0;
+        padding: 12px 17px 12px 17px;
+        cursor: pointer;
+    }
+    
+    .center .checkbox #confirm:hover {
+        background: #8e89f0;
+    }
+    
+    .center .checkbox .butt:hover {
+        background: #09458f;
+    }
+
+    .bgcb2 {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100vw;
+        flex-grow: 1;
+        background: hsl(217, 100%, 97%);
+        margin: 0;
+        padding: 0;
+    }
+    
+    .checkbox2 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        align-self: flex-end;
+        background: white;
+        width: 100vw;
+        height: 64px;
+    }
+    
+    .checkbox2 .butt0 {
+        display: flex;
+        flex-grow: 1;
+        align-self: center;
+        justify-content: flex-start;
+        width: fit-content;
+        height: fit-content;
+        color: #9699AB;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin: 0 0 0 0;
+        padding: 12px 17px 12px 17px;
+        cursor: pointer;
+    }
+    
+    .checkbox2 .butt0:hover {
+        color: #02295A;
+    }
+    
+    .checkbox2 .butt {
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        background: #02295A;
+        width: fit-content;
+        height: fit-content;
+        color: #F0F6FF;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin: 0 20px 0 0;
+        padding: 12px 17px 12px 17px;
+        cursor: pointer;
+    }
+    
+    .checkbox2 #confirm {
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        background: #473DFF;
+        width: fit-content;
+        height: fit-content;
+        color: #F0F6FF;
+        font-weight: 400;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin: 0 20px 0 0 ;
+        padding: 12px 17px 12px 17px;
+        cursor: pointer;
+    }
+    
+    .checkbox2 #confirm:hover {
+        background: #8e89f0;
+    }
+    
+    .checkbox2 .butt:hover {
+        background: #09458f;
+    }
+}

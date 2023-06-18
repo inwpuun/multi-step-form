@@ -1,4 +1,5 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
+
 import './../../css/plan-box.css'
 import advanced from '/images/icon-advanced.svg'
 import arcade from '/images/icon-arcade.svg'
@@ -6,9 +7,10 @@ import pro from '/images/icon-pro.svg'
 
 type Props = {title: string, price: string, type: string, isAlert: boolean, changePlan: (p: string) => void}
 
+
 export default function PlanBox({title, price, type, isAlert, changePlan}: Props) {
     let img = arcade;
-
+        
     const style: React.CSSProperties = {
         animation: 'shake 0.5s',
         transition: 'all 0.5s ease-in-out'
